@@ -1,4 +1,7 @@
 package producto;
+import java.util.Arrays;
+import java.util.Date;
+
 public class Producto {
 
     public String nombreProducto;
@@ -25,6 +28,19 @@ public class Producto {
 
     public double getPrecioProducto(){
         return this.precioProducto;
+    }
+
+
+    public int compareTo(Producto producto) {
+        if (this.precioProducto < producto.precioProducto) {
+            return -1;
+        }
+        if (this.precioProducto > producto.precioProducto){
+            return 1;
+        }
+
+        return 0;
+        
     }
 
 }
